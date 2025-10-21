@@ -1,0 +1,125 @@
+
+body {
+    background-image: url("/background.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    font-family: 'Fjalla', sans-serif;
+}
+
+header {
+    background-color: #9b1a07;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.introduction {
+    text-align: center;
+    font-size: 28px;
+    margin: 100px auto;
+    line-height: 1.8;
+}
+
+.content-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.content-section h2 {
+    font-size: 40px;
+    color: #9b1a07;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.content-section img {
+    max-width: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.project-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #af210b;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #af210b;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-box:hover {
+    background-color: #af210b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.skill-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid #9b1a07;
+    border-radius: 15px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box img {
+    width: 70px;
+    height: 70px;
+}
