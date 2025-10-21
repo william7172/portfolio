@@ -1,21 +1,27 @@
 
+/* --- Global Styling --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
     background-image: url("background.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     color: #222;
-    font-family: 'Fjalla', sans-serif;
 }
 
+/* --- Header --- */
 header {
     background-color: #9b1a07;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: sticky;
+    padding: 15px 0;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -33,48 +39,55 @@ nav a {
     margin: 0 20px;
     font-size: 20px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #ffd9d0;
 }
 
-.introduction {
-    text-align: center;
-    font-size: 28px;
-    margin: 100px auto;
-    line-height: 1.8;
-}
-
+/* --- Sections --- */
+.introduction,
 .content-section {
+    height: 100vh; /* full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .content-section h2 {
-    font-size: 40px;
+    font-size: 48px;
     color: #9b1a07;
     margin-bottom: 20px;
 }
 
 .content-section p {
-    font-size: 20px;
+    font-size: 22px;
     max-width: 800px;
-    margin: 0 auto 40px;
     line-height: 1.6;
+    margin: 0 auto;
 }
 
+/* --- About Section --- */
 .content-section img {
     max-width: 300px;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
+    border: 3px solid #9b1a07;
 }
 
+/* --- Projects Grid --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     justify-items: center;
+    width: 80%;
     margin-top: 40px;
 }
 
@@ -100,6 +113,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* --- Skills Grid --- */
 .skills-grid {
     display: flex;
     justify-content: center;
@@ -117,9 +131,31 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .skill-box img {
     width: 70px;
     height: 70px;
 }
+
+/* --- Contact --- */
+a {
+    color: #9b1a07;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Add padding to account for fixed header --- */
+body > section:first-of-type {
+    margin-top: 80px;
+}
+
